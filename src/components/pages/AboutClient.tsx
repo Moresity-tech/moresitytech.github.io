@@ -175,7 +175,7 @@ export function AboutClient() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
+      {/* <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
         <SectionHeader eyebrow="Leadership" title="The people you'll actually work with." />
         <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-2">
           {leaders.map((p) => (
@@ -211,7 +211,7 @@ export function AboutClient() {
             </StaggerItem>
           ))}
         </Stagger>
-      </section>
+      </section> */}
 
       <section className="mx-auto max-w-7xl px-4 pb-20 md:px-6">
         <Reveal>
