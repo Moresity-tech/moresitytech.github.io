@@ -51,7 +51,3 @@ jobs:
           port: 21
           local-dir: ./out/
           server-dir: /public_html/
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
