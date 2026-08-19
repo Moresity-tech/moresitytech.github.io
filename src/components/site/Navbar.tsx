@@ -103,7 +103,7 @@ export function Navbar() {
               href="/contact"
               className="hidden rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background shadow-soft transition-transform hover:scale-[1.02] sm:inline-flex"
             >
-              Start a projects
+              Start a project
             </Link>
             <button
               onClick={() => setOpen((v) => !v)}
