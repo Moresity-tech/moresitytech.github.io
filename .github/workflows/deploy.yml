@@ -40,7 +40,11 @@ jobs:
           ls -la
           echo "Export folder:"
           ls -la out
-
+      - name: Test FTP DNS
+        run: |
+          nslookup ftp.toursnepal.online
+          getent hosts ftp.toursnepal.online
+      
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -52,7 +56,4 @@ jobs:
           local-dir: ./out/
           server-dir: /
 
-      - name: Test FTP DNS
-        run: |
-          nslookup ftp.toursnepal.online
-          getent hosts ftp.toursnepal.online
+      
