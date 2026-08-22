@@ -34,18 +34,14 @@ jobs:
       - name: Build Next.js Static Export
         run: pnpm build
 
-      - name: Verify Export Folder
+      - name: Verify Export
         run: |
-          echo "Project root:"
-          ls -la
+          echo "Checking Next.js export..."
+          test -f out/index.html
           echo "Export folder:"
-          ls -la out
-      - name: Test FTP DNS
-        run: |
-          nslookup ftp.toursnepal.online
-          getent hosts ftp.toursnepal.online
-      
-      - name: Deploy to cPanel via FTP
+          ls -lah out
+
+      - name: Deploy to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -55,5 +51,3 @@ jobs:
           port: 21
           local-dir: ./out/
           server-dir: /
-
-      
